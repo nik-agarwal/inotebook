@@ -1,9 +1,9 @@
 import Notes from "./Notes";
-export const Homee = () => {
- 
+export const Homee = (props) => {
+ const {showAlert} =props;
   return (
     <div>
-      <Notes />
+      <Notes showAlert={showAlert} />
     </div>
   );
 };

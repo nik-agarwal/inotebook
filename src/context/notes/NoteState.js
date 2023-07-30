@@ -14,7 +14,7 @@ const NoteState = (props) => {
       headers: {
         "Content-Type": "application/json",
         "auth-token":
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRhZTliNjZkZmVmNjUyMmIyZjNlYTIzIn0sImlhdCI6MTY4OTE4Mjg4OH0.15_FIdF9YLjvXs_J3_c0DcrijTk9XSAF_edx91QD_yU",
+           "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRhZTliNjZkZmVmNjUyMmIyZjNlYTIzIn0sImlhdCI6MTY4OTE4Mjg4OH0.15_FIdF9YLjvXs_J3_c0DcrijTk9XSAF_edx91QD_yU", 
       },
     });
     const json = await response.json();
@@ -31,7 +31,7 @@ const NoteState = (props) => {
       headers: {
         "Content-Type": "application/json",
         "auth-token":
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRhZTliNjZkZmVmNjUyMmIyZjNlYTIzIn0sImlhdCI6MTY4OTE4Mjg4OH0.15_FIdF9YLjvXs_J3_c0DcrijTk9XSAF_edx91QD_yU",
+           "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRhZTliNjZkZmVmNjUyMmIyZjNlYTIzIn0sImlhdCI6MTY4OTE4Mjg4OH0.15_FIdF9YLjvXs_J3_c0DcrijTk9XSAF_edx91QD_yU", 
       },
       body: JSON.stringify({title, description, tag})
     });
@@ -48,11 +48,11 @@ const NoteState = (props) => {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
-        "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRhZTliNjZkZmVmNjUyMmIyZjNlYTIzIn0sImlhdCI6MTY4OTE4Mjg4OH0.15_FIdF9YLjvXs_J3_c0DcrijTk9XSAF_edx91QD_yU",
+        "auth-token":  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRhZTliNjZkZmVmNjUyMmIyZjNlYTIzIn0sImlhdCI6MTY4OTE4Mjg4OH0.15_FIdF9YLjvXs_J3_c0DcrijTk9XSAF_edx91QD_yU", 
       }
     });
     const json = await response.json();
-
+    
     //logic to delete 
     const newNotes = notes.filter((note) => {
       return note._id !== id;
@@ -69,7 +69,7 @@ const NoteState = (props) => {
       headers: {
         "Content-Type": "application/json",
         "auth-token":
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRhZTliNjZkZmVmNjUyMmIyZjNlYTIzIn0sImlhdCI6MTY4OTE4Mjg4OH0.15_FIdF9YLjvXs_J3_c0DcrijTk9XSAF_edx91QD_yU",
+           "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRhZTliNjZkZmVmNjUyMmIyZjNlYTIzIn0sImlhdCI6MTY4OTE4Mjg4OH0.15_FIdF9YLjvXs_J3_c0DcrijTk9XSAF_edx91QD_yU", 
       },
       body: JSON.stringify({title, description, tag}),
     });

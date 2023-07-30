@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import noteContext from "../context/notes/noteContext";
 
-const AddNote = () => {
+const AddNote = (props) => {
   const context = useContext(noteContext);
   const { addNote } = context;
   const [note, setNote] = useState({ title: "", description: "", tag: "" });
@@ -10,16 +10,17 @@ const AddNote = () => {
     e.preventDefault();
     addNote(note.title, note.description, note.tag);
     setNote({id : "", title: "", description: "", tag: ""})
+    props.showAlert("Added Successfully","success");
   };
 
   const onchange = (e) => {
     setNote({ ...note, [e.target.name]: e.target.value });
   };
   return (
-    <div className="container my-3">
+    <div className="container">
       <h1>Add a Note</h1>
       <form className="row g-3 ">
-        <div className=" mb-2">
+        <div className=" mb-1">
           <label htmlFor="title" className="form-label">
             Title
           </label>
@@ -32,7 +33,7 @@ const AddNote = () => {
             onChange={onchange} minLength={5} required
           />
         </div>
-        <div className=" mb-2">
+        <div className=" mb-1">
           <label htmlFor="description" className="form-label">
             Description
           </label>
@@ -45,7 +46,7 @@ const AddNote = () => {
             onChange={onchange} minLength={5} required
           />
         </div>
-        <div className=" mb-2">
+        <div className=" mb-1">
           <label htmlFor="tag" className="form-label">
             Tag
           </label>
@@ -58,7 +59,7 @@ const AddNote = () => {
             onChange={onchange} minLength={5} required
           />
         </div>
-        <div className=" mb-2">
+        <div className=" mb-1">
           <button
             disabled = {note.title.length<5 || note.description.length <5}
             type="submit"
